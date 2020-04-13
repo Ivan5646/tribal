@@ -1,0 +1,343 @@
+{% set item = data['items']['merchant_beauty']['products'][0] %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Тренинг</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header class="header">
+		<div class="header__wrap">
+			<div class="layout-center-wrapper">
+				<div class="header__inner">
+					<div class="header__left">
+						<p class="header__author">Курс Ирины Козловской</p>
+						<h1 class="header__title">Beauty Guide. Путеводитель в мир макияжа и ухода за кожей</h1>
+						<p class="header__slogan">Выражай свою уникальность!
+						</p>
+
+						<p class="header__date">{{data["event"]["date"]}}</p>
+
+						<button type="button" class="template-btn" id="headerToPaymentBtn">
+							<span>Принять участие</span>
+						</button>
+						{% if data['admin'] %}
+						<!-- EDIT TEMPLATE -->
+						<br><br><a href="/manager/info"><button class="template-btn" type="button" id="" onclick="">
+								<span>Изменить описание</span>
+							</button></a>
+						<!-- EDIT TEMPLATE -->
+						{% end %}
+					</div>
+					<div class="header__right">
+						<img src="img/header-intro.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="background-image: url(img/header-bg.jpg);" class="header__bg-layout">
+		</div>
+	</header>
+
+	<main>
+		<!-- AUDIENCE -->
+		<div class="audience">
+			<div class="layout-center-wrapper">
+				<h3 class="audience__title training-title">Для кого этот курс</h3>
+				<ul class="audience__list">
+					<li class="audience__item">
+						<div class="audience__num"><span>1</span></div>
+						<p class="audience__text">Тинейджеры, которые хотят пробовать и экспериментировать без вреда для
+							кожи и перебора
+						</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__num"><span>2</span></div>
+						<p class="audience__text">Молодые мамы, чтобы сохранить и приумножить свою молодость и красоту,
+							быть частью женского сообщества
+						</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__num"><span>3</span></div>
+						<p class="audience__text">Мамы подростков, чтобы стать ближе и разбираться в трендах
+						</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__num"><span>4</span></div>
+						<p class="audience__text">Женщины зрелого возраста, чтобы окунуться в свою вторую молодость
+						</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__num"><span>5</span></div>
+						<p class="audience__text">Бьютиблогеры и представители индустрии красоты
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- KNOWLEDGE -->
+		<div class="knowledge">
+			<div class="layout-center-wrapper">
+				<h3 class="knowledge__title training-title">Чему вы научитесь</h3>
+				<div class="knowledge__inner">
+					<ul class="knowledge__list">
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>1</span></div>
+							<p class="knowledge__text">Классификация косметики, их основные характеристики и
+								особенности. Разбор косметички
+							</p>
+						</li>
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>2</span></div>
+							<p class="knowledge__text">Построение главных линий макияжа. Практические занятия по
+								дневному, деловому, лёгкому и антивозрастному макияжу</p>
+						</li>
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>3</span></div>
+							<p class="knowledge__text">Создание ежедневных образов, опираясь на природную гамму и в
+								рамках поставленной задачи</p>
+						</li>
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>4</span></div>
+							<p class="knowledge__text">Практические занятия по созданию самых популярных и модных
+								образов. Смоки айз, Голливудский макияж, классический вечерний макияж</p>
+						</li>
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>5</span></div>
+							<p class="knowledge__text">Трансформация базового макияжа в вечерний и праздничный</p>
+						</li>
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>6</span></div>
+							<p class="knowledge__text">Обзор трендов в макияже, подбор косметики для его создания.
+								Разбор ошибок при выборе инструментов для макияжа</p>
+						</li>
+					</ul>
+
+					<div class="knowledge__img-wrap">
+						<img src="img/about.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- MIDDLE TITLE -->
+		<div class="middle-title" style="background-image: url(img/header-bg.jpg);">
+			<div class="layout-center-wrapper">
+				<div class="middle-title__inner">
+					<div>
+						<h1 class="middle-title__text">Beauty Guide. Путеводитель в мир макияжа и ухода за кожей</h1>
+					</div>
+
+					<button type="button" class="template-btn" id="middleToPaymentBtn">
+						<span>Принять участие</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- VIDEO BLOCK -->
+		<div class="video-block">
+			<div class="layout-center-wrapper">
+				<div class="video-block__inner">
+					<div class="video-block__left">
+						<h3 class="video-block__title">специально для вас мы записали видео о&nbsp;курсе</h3>
+
+						<p class="video-block__text">В нем мы расскажем о том, как проходит курс, его особенностях и
+							преимуществах</p>
+					</div>
+
+					<div class="video-block__right">
+						<iframe class="video-block__frame" src="https://www.youtube.com/embed/MAgr_Z2UCG0"
+							frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CAUCH BLOCK -->
+		<div class="coach-block">
+			<div class="layout-center-wrapper">
+				<h3 class="coach-block__title">Автор и руководитель курса</h3>
+				<div class="coach-block__inner">
+					<div class="coach-block__img-wrap">
+						<img src="img/author.jpg" alt="">
+					</div>
+
+					<div class="coach-block__desc-wrap">
+						<span class="coach-block__name">Ирина Козловская</span>
+						<p class="coach-block__text">Визажист международного уровня</p>
+						<p class="coach-block__text">Автор обучающих программ по макияжу для любителей и
+							профессиональных визажистов</p>
+						<p class="coach-block__text">Более 3000 клиентов, более 150 стали профессиональными визажистами
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- FOOTER -->
+	<footer class="footer" style="background-image: url(img/footer-bg.jpg);">
+		<div class="layout-center-wrapper">
+			<div class="footer__inner">
+				<div class="footer__tarif-wrap">
+					<h3 class="footer__title">Тариф включает:</h3>
+
+					<ul class="footer__list">
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">Основы грамотного ухода за кожей и принципов современного макияжа
+							</p>
+						</li>
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">Вы поймете, как создаётся гармоничный образ, формируется стиль и
+								расставляются акценты</p>
+						</li>
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">Вы научитесь разбираться в косметике и создадите
+								больше десяти образов на любой случай
+							</p>
+						</li>
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">Расширите область своих навыков и знаний, если ваша профессия лежит
+								в сфере косметических продуктов</p>
+						</li>
+					</ul>
+				</div>
+				<!-- PAYMENT BLOCK -->
+				<div class="payment" id="paymentBlock">
+					<div class="payment__header">
+						<span class="payment__text">Стоимость тренинга:</span>
+						<span class="payment__amount">{{item['price']}} ₽</span>
+					</div>
+
+					{% if lead_promo %}
+					<div class="payment__inner">
+						<div class="payment__btns-wrap">
+							<button class="template-btn" type="button" id="cardBtn">
+								<span>Оплатить картой</span>
+							</button>
+
+							<img src="img/visa-logo.svg" alt="visa">
+						</div>
+						<div class="payment__btns-wrap">
+							<button class="template-btn" type="button" id="ntzdBtn">
+								<span>Оплатить в ntz</span>
+							</button>
+							<img src="img/ntz-logo.svg" alt="visa">
+						</div>
+					</div>
+
+					{% else %}
+					<div class="non-ref">
+						<p class="non-ref__text">Для совершения покупки Вам необходима реферальная ссылка. Для её
+							получения обратитесь к тому, кто Вам посоветовал этот товар или найдите ссылку в инстаграме
+							по хештегу
+							<a href="https://www.instagram.com/explore/tags/netizensteam/">#netizensteam</a></p>
+					</div>
+					{% end %}
+				</div>
+			</div>
+		</div>
+		
+		<!-- GOODS BLOCK ! IMPORTANT-->
+		<input type="hidden" name="item_number" id="{{item['code']}}"
+		class="items_quantity"
+		value=1 min=1 disabled data-price="{{item['price']}}"
+		data-old_price="{{item['old_price']}}" data-name="{{item['name']}}"
+		data-image="{{item['image']}}">
+		<!-- GOODS BLOCK ! IMPORTANT-->
+
+		<!-- POLICY BLOCK -->
+		<div class="footer__policy">
+			<div class="layout-center-wrapper">
+				<div class="footer__policy-inner">
+					<span class="footer__policy-left">&copy; Official partner of the Netizens ecosystem</span>
+					<div class="footer__policy-right">
+						<a href="docs/политика конфиденциальности.pdf" class="footer__link" download="">Политика
+							конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form__overlay" id="formOverlay"></div>
+
+		<!-- RUR FORM -->
+		<div class="form__wrap" id="paymentFormRUR">
+			<form action="#" class="form">
+				<span class="form__close-btn" id="closeRurForm"></span>
+				<div class="form__inner">
+					<h3 class="form__title">купить курс</h3>
+					<p class="form__text">Чтобы приобрести курс, заполните все поля</p>
+
+					<input name="name" value="{{lead_name}}" type="text" placeholder="Имя и Фамилия" required
+						class="form__field" id="userNameFormRUR">
+					<input name="phone" value="{{lead_phone}}" type="tel" placeholder="Телефон" class="form__field"
+						required id="userPhoneFormRUR">
+					<input name="email" value="{{lead_email}}" type="email" placeholder="E-mail" required
+						class="form__field" id="userEmailFormRUR">
+
+					<button id="send_rur" class="form__btn template-btn noselect" type="button" onclick="addOrder('FormRUR')">
+						<span>Оплатить</span>
+					</button>
+
+					<p class="form__personal">Нажимая кнопку “Оплатить”, вы соглашаетесь c политикой конфиденциальности
+						и даёте согласие на обработку персональных
+						данных</p>
+				</div>
+			</form>
+		</div>
+
+		<!-- NTZ FORM -->
+		<div class="form__wrap" id="paymentFormNTZ">
+			<form action="#" class="form">
+				<span class="form__close-btn" id="closeNTZForm"></span>
+				<div class="form__inner">
+					<h3 class="form__title">купить курс</h3>
+					<p class="form__text">Чтобы приобрести курс, заполните все поля</p>
+
+					<input name="login" value="{{lead_login}}" type="text" placeholder="Ваш логин в ntz.team" required
+						class="form__field" id="userLoginFormNTZ">
+
+					<input name="name" value="{{lead_name}}" type="text" placeholder="Имя и Фамилия" required
+						class="form__field" id="userNameFormNTZ">
+					<input name="phone" value="{{lead_phone}}" type="tel" placeholder="Телефон" class="form__field"
+						required id="userPhoneFormNTZ">
+					<input name="email" value="{{lead_email}}" type="email" placeholder="E-mail" required
+						class="form__field" id="userEmailFormNTZ">
+
+					<button id="send_ntz" class="form__btn template-btn noselect" type="button" onclick="addOrder('FormNTZ')">
+						<span>Оплатить</span>
+					</button>
+
+					<p class="form__personal">Нажимая кнопку “Оплатить”, вы соглашаетесь c политикой конфиденциальности
+						и даёте согласие на обработку персональных
+						данных</p>
+
+					{% if lead_promo %}
+					<span class="form__control">Контрольное слово: {{lead_promo}}</span>
+					{% end %}
+				</div>
+			</form>
+		</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/base.js"></script>
+	<script src="js/api.js"></script>
+
+</body>
+
+</html>
