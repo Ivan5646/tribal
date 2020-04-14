@@ -70,7 +70,6 @@ input[type='number']::-webkit-outer-spin-button {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
-	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 }
@@ -142,6 +141,16 @@ input[type='number']::-webkit-outer-spin-button {
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 5;
+}
+
+.header__bg-layout:after {
+	content: '\A';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .header__inner {
@@ -354,6 +363,8 @@ input[type='number']::-webkit-outer-spin-button {
 	background-position: 100% 0;
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
+	background-image: url(../img/header-bg.jpg);
 }
 
 .middle-title__inner {
@@ -363,6 +374,8 @@ input[type='number']::-webkit-outer-spin-button {
 	justify-content: space-between;
 	-ms-flex-align: center;
 	align-items: center;
+	position: relative;
+	z-index: 2;
 }
 
 .middle-title__text {
@@ -372,6 +385,16 @@ input[type='number']::-webkit-outer-spin-button {
 	color: #FFE380;
 	text-transform: uppercase;
 	text-align: center;
+}
+
+.middle-title:after {
+	content: '\A';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .video-block {
@@ -673,12 +696,24 @@ input[type='number']::-webkit-outer-spin-button {
 	background-size: cover;
 }
 
+.footer:after {
+	content: '\A';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
 .footer__inner {
 	display: grid;
 	grid-template-columns: 426px 570px;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding-bottom: 120px;
+	position: relative;
+	z-index: 2;
 }
 
 .footer__tarif-wrap {
@@ -690,6 +725,16 @@ input[type='number']::-webkit-outer-spin-button {
 	margin-bottom: 50px;
 	font-family: "FuturaPT-Bold", Arial, Helvetica, sans-serif;
 	font-size: 36px;
+	line-height: 1.5;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.footer__list-title {
+	display: block;
+	margin-bottom: 40px;
+	font-family: "FuturaPT-Bold", Arial, Helvetica, sans-serif;
+	font-size: 30px;
 	line-height: 1.5;
 	text-transform: uppercase;
 	color: #ffffff;
@@ -722,6 +767,8 @@ input[type='number']::-webkit-outer-spin-button {
 .footer__policy {
 	padding-top: 30px;
 	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	position: relative;
+	z-index: 2;
 }
 
 .footer__policy-inner {
