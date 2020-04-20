@@ -33,5 +33,30 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop: $("#paymentBlock").offset().top
         }, 1500);
+	})
+	
+
+    // open rur form
+    $('#cardBtn2').on('click', function() {
+        $('#formOverlay2').fadeIn();
+        $('#payment2FormRUR').fadeIn();
     })
+
+    // open ntz form
+    $('#ntzdBtn2').on('click', function() {
+        $('#formOverlay2').fadeIn();
+        $('#payment2FormNTZ').fadeIn();
+	})
+
+	// close ntz form
+	$('#close2NTZForm').on('click', function() {
+		$('#formOverlay2').fadeOut();
+		$('#payment2FormNTZ').fadeOut();
+	})
+	
+	// close rur form
+	$('#close2RurForm').on('click', function() {
+		$('#formOverlay2').fadeOut();
+		$('#payment2FormRUR').fadeOut();
+	})
 })
