@@ -1,4 +1,6 @@
 {% set item = data['items']['j-shtoda']['products'][0] %}
+{% set ticket1 = data['items']['j-shtoda']['ticket1'] %}
+{% set ticket2 = data['items']['j-shtoda']['ticket2'] %}
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -242,19 +244,19 @@
 				<div class="payment" id="paymentBlock">
 					<div class="payment__header">
 						<span class="payment__text">Стоимость тренинга СТАНДАРТ:</span>
-						<span class="payment__amount">2400 ₽</span>
+						<span class="payment__amount">{{ticket1['price']}} ₽</span>
 					</div>
 
 					<div class="payment__inner">
 						<div class="payment__btns-wrap">
-							<button class="template-btn" type="button" id="cardBtn2">
+							<button class="template-btn" type="button" id="cardBtn">
 								<span>Оплатить картой</span>
 							</button>
 
 							<img src="img/visa-logo.svg" alt="visa">
 						</div>
 						<div class="payment__btns-wrap">
-							<button class="template-btn" type="button" id="ntzdBtn2">
+							<button class="template-btn" type="button" id="ntzdBtn">
 								<span>Оплатить в ntz</span>
 							</button>
 							<img src="img/ntz-logo.svg" alt="visa">
@@ -267,20 +269,20 @@
 
 					<div class="payment__header">
 						<span class="payment__text">Стоимость тренинга ПРЕМИУМ:</span>
-						<span class="payment__amount">{{item['price']}} ₽</span>
+						<span class="payment__amount">{{ticket2['price']}} ₽</span>
 					</div>
 
 					{% if lead_promo %}
 					<div class="payment__inner">
 						<div class="payment__btns-wrap">
-							<button class="template-btn" type="button" id="cardBtn">
+							<button class="template-btn" type="button" id="cardBtn2">
 								<span>Оплатить картой</span>
 							</button>
 
 							<img src="img/visa-logo.svg" alt="visa">
 						</div>
 						<div class="payment__btns-wrap">
-							<button class="template-btn" type="button" id="ntzdBtn">
+							<button class="template-btn" type="button" id="ntzdBtn2">
 								<span>Оплатить в ntz</span>
 							</button>
 							<img src="img/ntz-logo.svg" alt="visa">
@@ -300,12 +302,15 @@
 		</div>
 
 		<!-- GOODS BLOCK ! IMPORTANT-->
-		<input type="hidden" name="item_number" id="{{item['code']}}" class="items_quantity" value=1 min=1 disabled
-			data-price="{{item['price']}}" data-old_price="{{item['old_price']}}" data-name="{{item['name']}}"
-			data-image="{{item['image']}}">
-		<input type="hidden" name="item_number" id="j-shtoda2_ticket" class="items_quantity2" value=1 min=1 disabled
-			data-price="2400" data-old_price="2400" data-name="{{item['name']}}"
-			data-image="{{item['image']}}">
+
+		<input type="hidden" name="item_number" id="{{ticket1['code']}}" class="items_quantity" value=1 min=1 disabled
+			data-price="{{ticket1['price']}}" data-old_price="{{ticket1['old_price']}}" data-name="{{ticket1['name']}}"
+			data-image="{{ticket1['image']}}">
+
+		<input type="hidden" name="item_number" id="{{ticket2['code']}}" class="items_quantity2" value=1 min=1 disabled
+			data-price="{{ticket2['price']}}" data-old_price="{{ticket2['old_price']}}" data-name="{{ticket2['name']}}"
+			data-image="{{ticket2['image']}}">
+
 		<!-- GOODS BLOCK ! IMPORTANT-->
 
 		<!-- POLICY BLOCK -->
