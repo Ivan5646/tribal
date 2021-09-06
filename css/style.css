@@ -770,6 +770,10 @@ input[type='number']::-webkit-outer-spin-button {
 	color: #ffffff;
 }
 
+.footer__text--small {
+	font-size: 15px;
+}
+
 .footer__policy {
 	padding-top: 30px;
 	border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -797,6 +801,13 @@ input[type='number']::-webkit-outer-spin-button {
 	line-height: 28px;
 	color: rgba(255, 255, 255, 0.5);
 	text-decoration: underline;
+}
+
+.footer__inner-list {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 @media only screen and (max-width: 1200px) {

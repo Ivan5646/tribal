@@ -55,6 +55,10 @@
     &__text {
         width: 380px;
         .training-text(#ffffff);
+
+        &--small {
+            font-size: 15px;
+        }
     }
 
     &__policy {
@@ -75,6 +79,11 @@
     &__link {
         .training-text(rgba(255, 255, 255, 0.5));
         text-decoration: underline;
+    }
+
+    &__inner-list {
+        display: flex;
+        flex-direction: column;
     }
 }
 @media @tablet {
