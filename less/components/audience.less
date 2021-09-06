@@ -11,6 +11,8 @@
         grid-template-columns: 570px 570px;
         justify-content: space-between;
     }
+
+
     &__item {
         position: relative;
         margin-bottom: 30px;
@@ -18,9 +20,15 @@
         border-radius: 10px;
         background-color: #fff;
     }
+
     &__text {
         .training-text(@base-text-col);
+
+        &--bold {
+            font-weight: bold;
+        }
     }
+    
     &__num {
         position: absolute;
         top: 15px;
